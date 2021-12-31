@@ -1,0 +1,1 @@
+In node, only one thread runs hence it is safe to say that node js program is a single threaded program

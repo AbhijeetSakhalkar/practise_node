@@ -10,4 +10,10 @@ eventEmitter.on('connection', () => {
 
 //emitting event 'connection'
 eventEmitter.emit('connection');
-eventEmitter.emit('connections');
+eventEmitter.emit('connections'); // wont be called, as there is no event 'connections'
+
+eventEmitter.on('testEvent', (msg) => {
+    console.log('Inside test event with message :: '+ msg);
+})
+
+eventEmitter.emit('testEvent', ':: TEST EVENT SUCCESSFUL');

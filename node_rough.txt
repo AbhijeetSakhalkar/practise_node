@@ -1,1 +1,26 @@
-In node, only one thread runs hence it is safe to say that node js program is a single threaded program
+In node, only one thread runs hence it is safe to say that node js program is a single threaded program.
+
+---------------------------------------------------------------------------------------------------------------
+Events: 
+https://www.geeksforgeeks.org/node-js-events/
+
+// Registering fun1 and fun2
+eventEmitter.on('myEvent', fun1);
+eventEmitter.on('myEvent', fun1);
+eventEmitter.on('myEvent', fun2);
+   
+// Removing listener fun1 that was
+eventEmitter.removeListener('myEvent', fun1);
+
+fun1 is the callback which is reistered twice. after removing once, now in eventloop one time fun1 and one time fun2 is present
+---------------------------------------------------------------------------------------------------------------
+http module and express module
+ex:
+app.get('/', (req, resp) => {
+    console.log(req.method);
+    console.log(req.query);
+    resp.status(200).json({
+        message: 'All data about the request.'
+    });
+
+}); 

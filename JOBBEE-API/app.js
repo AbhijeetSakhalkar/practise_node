@@ -11,6 +11,17 @@ dotenv.config({path: './config/config.env'})
 //Connect to Database
 connectDatabase();
 
+//creating middleware
+const middleware = (req, resp, next) => {
+    console.log('Hello from the middleware');
+    
+    // setting up user variable globally
+    req.user = 'Abhijeet Sakhalkar';
+    next();
+};
+
+app.use(middleware);
+
 // importing all routes
 const jobs = require('./routes/jobs')
 

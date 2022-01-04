@@ -1,0 +1,21 @@
+{
+  "name": "jobbee-api",
+  "version": "1.0.0",
+  "description": "this is about jobs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app",
+    "prod": "SET NODE_ENV=production & nodemon app.js"
+  },
+  "author": "Abhijeet Sakhalkar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
